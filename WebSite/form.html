@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>表單</title>
+    <meta charset="utf-8" />
+    <style>
+        .st1 {
+            width: 350px;
+            border-bottom: 1px solid #E0E0E0;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .sub {
+            width: 350px;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .t1 {
+            width: 80px;
+            float: left;
+            padding-right: 2px;
+            text-align: right;
+            /*background-color: blanchedalmond;*/
+        }
+
+        fieldset {
+            border: 1px solid pink;
+            border-radius: 20px;
+            width: 150px;
+            margin: 15px;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+    <script>
+        // JS寫在這裡
+        function numberChange() {
+            var n = document.getElementById('numberInput').value;
+            document.getElementById('numberText').value = n;
+        }
+        function rangeChange() {
+            var n = document.getElementById('rangeInput').value;
+            document.getElementById('rangeText').value = n;
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>個人資料一</legend>
+            <div class="st1">
+                <label for="account" class="t1">姓名:</label>
+                <input type="text" name="account" placeholder="guest" id="account" maxlength="5" autofocus autocomplete="off" />
+            </div>
+            <div class="st1">
+                <label for="sex" class="t1">性別:</label>
+                <input type="radio" name="gender" value="male" id="g1" />
+                <label for="g1">男</label>
+                <input type="radio" name="gender" value="female" id="g2" />
+                <label for="g2">女</label>
+            </div>
+            <div class="st1">
+                <label for="pwd" class="t1">密碼:</label>
+                <input type="password" name="pwd" id="pwd" maxlength="8" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>基本資料</legend>
+            <div class="st1">
+                <label class="t1">地址:</label>
+                <select name="addr">
+                    <option value="TPE">台北市</option>
+                    <option value="TPH">新北市</option>
+                    <option value="TYC">桃園市</option>
+                    <option value="HSC">新竹市</option>
+                </select>
+
+                <input type="text" name="addr2" id="addr2" maxlength="30" />
+
+            </div>
+            <div class="st1">
+                <label class="t1">照片:</label>
+                <input type="file" name="file1" multiple />
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>個人資料二</legend>
+            <div class="st1">
+                <label for="hobby" class="t1">興趣:</label>
+                <input type="checkbox" name="hobby" value="read" id="read" />
+                <label for="read">閱讀</label>
+                <input type="checkbox" name="hobby" value="movie" id="movie" />
+                <label for="movie">電影</label>
+                <input type="checkbox" name="hobby" value="eat" id="eat" />
+                <label for="eat">吃美食</label>
+                <input type="checkbox" name="hobby" value="game" id="game" />
+                <label for="game">玩遊戲</label>
+            </div>
+            <div class="st1">
+                <label for="memo" class="t1">意見:</label>
+                <textarea cols="30" rows="5" id="memo" name="memo"></textarea>
+            </div>
+        </fieldset>
+        <div class="sub">
+            <input type="submit" value="送出" />
+            <input type="reset" value="清除" />
+        </div>
+
+    </form>
+    <form>
+        <input type="date" name="date" />
+        <br />
+        <input type="datetime-local" name="datetime-local" />
+        <br />
+        <input type="month" name="month" />
+        <br />
+        <input type="email" name="email" />
+        <br />
+        <input type="color" name="color" />
+        <br />
+        <input type="range" name="range" />
+        <br />
+        <input type="number" name="number" />
+        <br />
+        身分證字號:<input type="text" pattern="[a-zA-Z]{1}[1-2]{1}\d{8}" />
+        <br />
+        <input type="submit" value="送出" />
+
+    </form>
+    <fieldset>
+        <label>homepage</label><input name="hp" type="url" list="hpurls" />
+        <datalist id="hpurls">
+            <option value="https://tw.yahoo.com/"></option>
+            <option value="https://www.rakuten.com.tw/?&marin=sza6OhDU1|pcrid|199040219509|%E6%A8%82%E5%A4%A9|e|c|slid||&gclid=CjwKEAjwqIfLBRCk6vH_rJq7yD0SJACG18frcCuggHkOHVSdOyag7bU8oqblxzJlPxIhdWhCAeSkdRoCNV3w_wcB"></option>
+            <option value="http://www.cw.com.tw/article/article.action?id=5077642"></option>
+
+        </datalist>
+    </fieldset>
+    <div>
+        Number:
+        <input type="number" id="numberInput" min="-60" max="60" step="2" onchange="numberChange()" />
+        <input id="numberText" />
+    </div>
+    <div>
+        Range:
+        <input type="range" id="rangeInput" min="-40" max="40" step="2" onchange="rangeChange()" />
+        <input id="rangeText" />
+    </div>
+    <div>
+        <select></select>
+    </div>
+</body>
+</html>

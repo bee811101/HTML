@@ -1,0 +1,91 @@
+﻿body {
+}
+* {
+            margin: 0;
+            padding: 0;
+        }
+
+        #allpage {
+            width: 1024px;
+            margin: 0 auto;
+        }
+
+        /*width: 100% 可隨著#allpage 跟著調整*/
+        .menu {
+            overflow: auto;
+            width: 100%;
+            background-color: #C4E1E1;
+            list-style-type: none;
+            border-bottom: 3px solid #808080;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+            /*針對menu裡的li*/
+            .menu li {
+                float: left;
+                width: 7em;
+                border-right: 1px solid #ffffff;
+            }
+
+                .menu li a {
+                    display: block;
+                    text-align: center;
+                    line-height: 2.5em;
+                    text-decoration: none;
+                    color: #808080;
+                }
+
+                    .menu li a:hover {
+                        background-color:#46A3FF;
+                        color: azure;
+                    }
+
+        .title {
+            background-color: #FFD1A4;
+            line-height: 2.5em;
+            color: #4F4F4F;
+            padding-left: 17px;
+        }
+
+        article section {
+            margin: 16px;
+            border-bottom: 1px solid #BEBEBE;
+        }
+
+            article section p {
+                margin: 10px 0;
+            }
+
+        .sel {
+            list-style: decimal inside;
+        }
+
+        aside dl {
+            margin: 16px;
+        }
+
+        #content {
+            overflow: auto;
+            width: 100%;
+        }
+
+        article {
+            width: 800px;
+            float: left;
+        }
+
+        aside {
+            width: 200px;
+            float: right;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #C4E1E1;
+            color: #808080;
+            line-height: 2.5em;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }

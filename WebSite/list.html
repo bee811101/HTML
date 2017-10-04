@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>清單List</title>
+    <meta charset="utf-8" />
+    <style>
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: indianred;
+            font-size: 32px;
+        }
+
+        a:active {
+            color: orange;
+            font-size: 50px;
+        }
+
+        .s1 {
+            list-style-type: upper-alpha;
+        }
+
+        .s2 {
+            list-style-type: upper-roman;
+        }
+
+        .s3 {
+            list-style-image: url(/images/arrow1.png);
+        }
+
+        .in {
+            list-style-position: inside;
+        }
+
+        .out {
+            list-style-position: outside;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div>
+        <ul>
+            <li>
+                <a href="https://tw.yahoo.com/">aa</a>
+            </li>
+            <li>
+                <a href="https://tw.yahoo.com/">bb</a>
+            </li>
+            <li>
+                <a href="https://tw.yahoo.com/">cc</a>
+            </li>
+
+        </ul>
+    </div>
+    <br />
+    <div style="background-color:cornflowerblue">
+        <ul>
+            <li style="background-color:palevioletred">a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+    </div>
+    <hr />
+    <div>
+        <ol class="s1">
+            <li>
+                台北
+                <ul class="s2">
+                    <li>
+                        中正區
+                        <ul class="s3">
+                            <li class="in" style="background-color:aqua">重慶南路</li>
+                            <li class="out" style="background-color:red">重慶北路</li>
+                        </ul>
+                    </li>
+                    <li>大安區</li>
+                </ul>
+            </li>
+            <li>桃園</li>
+            <li>台中</li>
+        </ol>
+    </div>
+    <hr />
+    <div>
+        <h2>台灣黑熊</h2>
+        <dl>
+            <dt>學名</dt>
+            <dd>Taiwan Bear</dd>
+            <dt>俗名:</dt>
+            <dd>狗熊</dd>
+            <dd>白喉熊</dd>
+        </dl>
+    </div>
+</body>
+</html>
